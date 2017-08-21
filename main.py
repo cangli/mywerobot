@@ -7,6 +7,7 @@
 # @Software: PyCharm
 
 import werobot
+import secret
 
 
 robot = werobot.WeRoBot(token='gabrielhan')
@@ -16,9 +17,9 @@ robot = werobot.WeRoBot(token='gabrielhan')
 def hello_world():
     return 'Hello World!'
 
-robot.config['APP_ID'] = 'wxf31a6c50bf4b7a07'
-robot.config['APP_SECRET'] = '9f513338d0611a633750afb981d20a5c'
-robot.config['ENCODING_AES_KEY'] = 'U4lCzGqRK0ExAsWoqjouEu4qO42qLLJkeDuMjauaVZg'
+robot.config['APP_ID'] = secret.APP_ID
+robot.config['APP_SECRET'] = secret.APP_SECRET
+robot.config['ENCODING_AES_KEY'] = secret.ENCODING_AES_KEY
 robot.config['HOST'] = '0.0.0.0'
 robot.config['PORT'] = 80
 robot.run()
